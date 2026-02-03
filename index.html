@@ -1716,13 +1716,9 @@
                 <h2>Contattaci</h2>
                 <p>Hai un progetto in mente? Vuoi saperne di più sui nostri servizi? Scrivici o chiamaci, saremo felici di risponderti.</p>
                 <div class="contact-details">
-                    <a href="tel:+393334612192" class="contact-item">
-                        <div class="contact-item-icon">📞</div>
-                        <span>+39 333 461 2192</span>
-                    </a>
-                    <a href="mailto:giovanni.imburgia@gmail.com" class="contact-item">
+                    <a href="mailto:info@identika.io" class="contact-item">
                         <div class="contact-item-icon">✉️</div>
-                        <span>giovanni.imburgia@gmail.com</span>
+                        <span>info@identika.io</span>
                     </a>
                     <a href="https://instagram.com/identika" class="contact-item" target="_blank">
                         <div class="contact-item-icon">📸</div>
@@ -1730,7 +1726,9 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '✓ Messaggio Inviato!'; setTimeout(() => this.querySelector('button').textContent = 'Invia Messaggio', 3000);">
+            <form class="contact-form reveal" action="https://formspree.io/f/xbljpknr" method="POST">
+                <input type="hidden" name="_subject" value="Nuovo contatto da Identika.io">
+                <input type="hidden" name="_next" value="https://identika.io/#contatti">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" name="name" required placeholder="Il tuo nome">
@@ -1774,14 +1772,13 @@
             <div class="footer-links">
                 <h4>Contatti</h4>
                 <ul>
-                    <li><a href="tel:+393334612192">+39 333 461 2192</a></li>
-                    <li><a href="mailto:giovanni.imburgia@gmail.com">Email</a></li>
+                    <li><a href="mailto:info@identika.io">info@identika.io</a></li>
                     <li><a href="#contatti">Richiedi Info</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Identika - Avatar Communication. Tutti i diritti riservati.</p>
+            <p>© 2026 Identika - Avatar Communication. Tutti i diritti riservati. | <a href="/privacy.html">Privacy Policy</a> · <a href="/cookies.html">Cookie Policy</a></p>
             <div class="social-links">
                 <a href="#" aria-label="Instagram">📸</a>
                 <a href="#" aria-label="LinkedIn">💼</a>
