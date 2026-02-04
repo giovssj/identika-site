@@ -658,6 +658,25 @@
             font-weight: 700;
         }
 
+        /* Video wrapper for Safari poster fix */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .service-card p {
             color: var(--text-muted);
             font-size: 1rem;
@@ -1522,9 +1541,11 @@
         <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1100px; gap: 1.5rem;">
             <!-- Tour Immobiliare -->
             <div class="service-card reveal" style="padding: 0; overflow: hidden;">
-                <video controls playsinline preload="metadata" poster="poster-tour.jpg" style="width: 100%; display: block; border-radius: 20px 20px 0 0; background: url('poster-tour.jpg') center/cover no-repeat;">
-                    <source src="tour-immobiliare-completo.mp4" type="video/mp4">
-                </video>
+                <div class="video-wrapper" style="background-image: url('poster-tour.jpg');">
+                    <video controls playsinline preload="metadata" poster="poster-tour.jpg">
+                        <source src="tour-immobiliare-completo.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div style="padding: 1.25rem;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🏠 Tour Villa Mondello</h3>
                     <p style="color: var(--text-muted); font-size: 0.85rem;">4 scene: esterno → soggiorno → camera → terrazza. Avatar maschile.</p>
@@ -1532,9 +1553,11 @@
             </div>
             <!-- Ristorante -->
             <div class="service-card reveal" style="padding: 0; overflow: hidden;">
-                <video controls playsinline preload="metadata" poster="poster-ristorante.jpg" style="width: 100%; display: block; border-radius: 20px 20px 0 0; background: url('poster-ristorante.jpg') center/cover no-repeat;">
-                    <source src="demo-ristorante.mp4" type="video/mp4">
-                </video>
+                <div class="video-wrapper" style="background-image: url('poster-ristorante.jpg');">
+                    <video controls playsinline preload="metadata" poster="poster-ristorante.jpg">
+                        <source src="demo-ristorante.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div style="padding: 1.25rem;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🍝 Ristorante</h3>
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Presentazione trattoria siciliana. Avatar femminile in location.</p>
@@ -1542,9 +1565,11 @@
             </div>
             <!-- Dentista -->
             <div class="service-card reveal" style="padding: 0; overflow: hidden;">
-                <video controls playsinline preload="metadata" poster="poster-dentista.jpg" style="width: 100%; display: block; border-radius: 20px 20px 0 0; background: url('poster-dentista.jpg') center/cover no-repeat;">
-                    <source src="dentista.mp4" type="video/mp4">
-                </video>
+                <div class="video-wrapper" style="background-image: url('poster-dentista.jpg');">
+                    <video controls playsinline preload="metadata" poster="poster-dentista.jpg">
+                        <source src="dentista.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div style="padding: 1.25rem;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🦷 Studio Dentistico</h3>
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Dottoressa presenta lo studio. Avatar femminile, tono friendly.</p>
@@ -1552,9 +1577,11 @@
             </div>
             <!-- Commercialista -->
             <div class="service-card reveal" style="padding: 0; overflow: hidden;">
-                <video controls playsinline preload="metadata" poster="poster-commercialista.jpg" style="width: 100%; display: block; border-radius: 20px 20px 0 0; background: url('poster-commercialista.jpg') center/cover no-repeat;">
-                    <source src="commercialista.mp4" type="video/mp4">
-                </video>
+                <div class="video-wrapper" style="background-image: url('poster-commercialista.jpg');">
+                    <video controls playsinline preload="metadata" poster="poster-commercialista.jpg">
+                        <source src="commercialista.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div style="padding: 1.25rem;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">📊 Studio Commercialista</h3>
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Presentazione servizi fiscali. Avatar maschile professionale.</p>
